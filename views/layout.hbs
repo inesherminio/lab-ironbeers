@@ -13,9 +13,33 @@
     <link rel='stylesheet' href='/stylesheets/styles.css' />
   </head>
   <body>
+    {{! Instead of creating a partial for nav and footer, it makes more sense to include them in the layout.hbs file. All that "lives" in that file gets displayed in all views }}
+    <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
+      <div class='container-fluid'>
+
+        <button
+          class='navbar-toggler'
+          type='button'
+          data-bs-toggle='collapse'
+          data-bs-target='#navbarNavAltMarkup'
+          aria-controls='navbarNavAltMarkup'
+          aria-expanded='false'
+          aria-label='Toggle navigation'
+        >
+          <span class='navbar-toggler-icon'></span>
+        </button>
+        <div class='collapse navbar-collapse' id='navbarNavAltMarkup'>
+          <div class='navbar-nav'>
+            <a class='nav-link active' aria-current='page' href='/'>Home</a>
+            <a class='nav-link' href='/beers'>Beers</a>
+            <a class='nav-link' href='/random-beer'>Random Beer</a>
+          </div>
+        </div>
+      </div>
+    </nav>
 
     {{{body}}}
-    
+
     <script
       src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js'
       integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p'

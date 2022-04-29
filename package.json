@@ -12,3 +12,5 @@
     "punkapi-javascript-wrapper": "^1.0.2"
   }
 }
+
+// I would suggest to install nodemon, so that your server is always running and updating

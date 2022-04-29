@@ -1,7 +1,11 @@
+{{! If you look closer, the randomBeer partial is an extension from the beer partial. }}
+{{!-- Thus, you could either use the beer partial here and then add the rest of information, making a complete randomBeer partial, or not have a random beer partial and, on the random beer view, use the beer partial and add the rest of information --}}
+{{!-- Dont forget, partials are pieces of code that are reused so that we do not duplicate code, do don't duplicate it making more partials. --}}
+
 <section class='random-beer-container'>
   <div class='random-beer'>
     <div class='random-beer-img'>
-        <img src='{{image_url}}' alt='{{name}}'/>
+      <img src='{{image_url}}' alt='{{name}}' />
     </div>
     <div class='random-beer-infos'>
       <h5 class='card-title'>{{name}}</h5>
