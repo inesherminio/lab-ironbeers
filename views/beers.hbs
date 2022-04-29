@@ -1,0 +1,11 @@
+<!-- views/beers.hbs -->
+
+
+
+<div class="all-beers-container">
+  {{#each beers}}
+  {{!-- Need to pass partial + this ===> when looping through
+  array this represents each obhect in the array --}}
+    {{> beerPartial }}
+  {{/each}}
+</div>

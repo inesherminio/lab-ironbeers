@@ -1,7 +1,156 @@
 /*
-white: #f7f9f9;
+  white: #f7f9f9;
 light-blue: #2081c3;
 dark-blue: #0a2c42;
 grey: #bfbfbf;
-font-family: Arial, Helvetica, sans-serif;
+
 */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+p{
+  font-size: 12px;
+  }
+  
+
+  h1 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 10px 
+}
+h3{
+  font-size:14px;
+  font-weight: bold;
+  padding: 10px 0 5px 0;
+
+}
+h4{
+  font-size: 13px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+
+span {
+  font-weight: bold;
+  
+}
+.card img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+#container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 80%;
+  background-color: #e0e0e0;  
+}
+#beer-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  margin-top: 2%;
+}
+#beer{
+  width: 30%;
+}
+.main-button {
+
+  margin-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 10%;
+}
+#beerButton{
+  box-shadow: 0px 1px 0px 0px #f0f7fa;
+	background:linear-gradient(to bottom, #33bdef 5%, #0d6efd 100%);
+	background-color:#0d6efd;
+	border-radius:6px;
+	border:1px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	/* font-family:Arial; */
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+  margin-top: 10%;
+}
+.beerButton:hover {
+	background:linear-gradient(to bottom, #0d6efd 5%, #33bdef 100%);
+	background-color:#33bdef;
+}
+.beerButton:active {
+	position:relative;
+	top:1px;
+}
+
+#dev-note{
+background-color: #484848 ;
+height: 5%;
+display: flex;
+align-items: center;
+padding-left: 2%;
+font-weight:bold;
+color:#ffffff;
+/* ?in order to fix it to the botton of the screen in all pages */
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+
+}
+
+
+.beer-container{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  
+  margin: 2%;
+  width: 25%;
+}
+
+
+.beer-img{
+  height: 170px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3%;
+}
+
+.all-beers-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2%;
+  ;
+}
+.random-beer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 2% 0 0 35%;
+}
+#random-li {
+  list-style-type: disc;
+  margin: 0 0 10px 40px;
+  font-size: 12px;
+
+}
+#random-ul {
+  margin-bottom: 20px;
+}
+#food-container{
+  margin-left: 4%;
+}
