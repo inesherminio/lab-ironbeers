@@ -1,15 +1,26 @@
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>IronBeers</title>
-    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel='stylesheet' href='/stylesheets/styles.css' />
   </head>
   <body>
-    {{{ body }}}
+    {{! The navbar works just like the footer. Meaning, since its a global element (present in all, or majority, of views), should be placed in the layout.hbs and not defined as partial }}
+    {{!-- If, by any chance, there are some particular views in which you don't want to display the navbar, just write { layout: false } when rendering the view. Will put an example on app.js, for you to see --}}
+    <nav>
+      <div class='navbar'>
+        <a href='/'>Home</a>
+        <a href='/beers'>Beers</a>
+        <a href='/random-beers'>Random Beer</a>
+      </div>
+    </nav>
+    {{{body}}}
+    {{! All of the views' content should be placed inside the body tag (the HTML one, not the hbs wrapper) }}
+    <footer>
+      <p>Developed by Helena at Ironhack!</p>
+    </footer>
   </body>
-  <footer>
-    <p>Developed by Helena at Ironhack!</p>
-</footer>
+
 </html>

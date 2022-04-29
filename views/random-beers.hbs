@@ -1,7 +1,10 @@
-{{> navbar}}
+{{!-- {{> navbar}} --}}
+
+{{!-- In this case, you should be using the beerPartial as well. Partials exist so that we don't have to duplicate code, which makes this the perfect example: applying beerPartial to beers.hbs and random.hbs --}}
+{{!-- Since our partial does not contain all info that we want to display in the random beer view, inside our #each we call the partial and then add the rest of the info --}}
 
 {{#each randomBeer}}
-    <div id="random-beers-cards">
+    {{!-- <div id="random-beers-cards">
         <div>
             <img src="{{this.image_url}}" id="random-beer-img" alt="{{this.name}}image">
         </div>
@@ -17,6 +20,18 @@
             {{/each}}
             <p><b>Brewer tips: </b>{{this.brewers_tips}}</p>
     </div>
+    </div> --}}
+
+
+{{> beerPartial }}
+<p>Food Pairing:</p>
+{{#each this.food_pairing}}
+    <div class="food-list-div">
+        <li >{{this}}</li>
     </div>
+{{/each}}
+<p><b>Brewer tips: </b>{{this.brewers_tips}}</p>
+
+
 
 {{/each}}
