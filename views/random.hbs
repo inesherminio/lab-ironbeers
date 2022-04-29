@@ -1,24 +1,30 @@
+
+{{!-- All of the information on this view regards the same random beer --}}
+{{!-- The data from that random beer will come from the API in the form of an object called "random" (defined by you in app.js and used in line 2) --}}
+{{!-- However, you were closing the #each with the info from the randomBeer after displaying the info on the beerPartial --}}
+{{!-- Meaning hbs will not know what is food_pairing (line 10) and brewer_tips (line 17)  --}}
+
+
 <div class="random-beer-container">
 {{#each random}}
 {{> beerPartial }}
-{{/each}}
+
 
 <div id="food-container">
 
 <h5>Food pairing:</h5>
 <ul id="random-ul">
-  {{#each food_pairing}} 
+  {{#each this.food_pairing}} 
     <li id="random-li">{{this}}</li>
   {{/each}}
   
 </ul>
     
 <p>
-  <span>Brewers Tips:</span> {{brewers_tips}}
+  <span>Brewers Tips:</span> {{this.brewers_tips}}
 </p>
 </div>
+{{!-- Pushing your /each down here will make information from random available until this point, meaning hbs now knows what is food_pairing and brewer_tips --}}
+{{/each}}
 </div>
 
-
-
-  
