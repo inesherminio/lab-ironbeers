@@ -1,0 +1,12 @@
+{{> navbar}}
+<h1>Beers!</h1>
+{{#each beers}}
+<div id="beers-cards">
+    <img src="{{this.image_url}}" id="beer-card-img" alt="{{this.name}}image">
+    <h2> {{this.name}}</h2>
+    <h3>{{this.tagline}}</h3>
+    <p id="beers-description">{{this.description}}</p>
+
+</div>
+{{/each}}
+

@@ -1,0 +1,22 @@
+{{> navbar}}
+
+{{#each randomBeer}}
+    <div id="random-beers-cards">
+        <div>
+            <img src="{{this.image_url}}" id="random-beer-img" alt="{{this.name}}image">
+        </div>
+        <div>
+            <h2>{{this.name}}</h2>
+            <h4 id="random-beer-tagline">{{this.tagline}}</h4>
+            <p id="beers-description">{{this.description}}</p>
+            <p>Food Pairing:</p>
+            {{#each this.food_pairing}}
+                <div class="food-list-div">
+                    <li >{{this}}</li>
+                </div>
+            {{/each}}
+            <p><b>Brewer tips: </b>{{this.brewers_tips}}</p>
+    </div>
+    </div>
+
+{{/each}}
